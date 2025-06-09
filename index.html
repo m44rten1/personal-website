@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/maarten.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <title>Maarten</title>
+    <script
+      type="module"
+      src="https://unpkg.com/wired-elements?module"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/wired-elements/lib/wired-combo.js?module"
+    ></script>
+
+    <style>
+      body {
+        font-family: "Indie Flower", system-ui, Avenir, Helvetica, Arial,
+          sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .center-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      a:hover {
+        transform: scale(1.1);
+      }
+      p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" class="center-screen">
+      <div style="display: flex; align-items: center; flex-direction: column">
+        <img src="/maarten.svg" alt="maarten" width="400px" />
+        <h1 style="margin: 10px 0">Maarten Van Steenkiste</h1>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <p>Husband • Father • Maker • Minimalist</p>
+        <p>
+          Software Engineer at
+          <wired-link href="https://craftzing.com">Craftzing</wired-link>
+        </p>
+        <p>
+          <wired-link href="mailto:m.vansteenkiste@me.com"
+            >&#x2709; mail me</wired-link
+          >
+        </p>
+      </div>
+    </div>
+    <a
+      href="https://github.com/m44rten1"
+      style="
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      "
+    >
+      <img src="/github_pencil.svg" alt="github" width="40px" />
+    </a>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

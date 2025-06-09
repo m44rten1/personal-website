@@ -1,0 +1,12 @@
+<svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="black"
+  stroke-width="4">
+  <!-- Left frame -->
+  <circle cx="50" cy="50" r="25" />
+  <!-- Right frame -->
+  <circle cx="150" cy="50" r="25" />
+  <!-- Bridge -->
+  <path d="M75 50 Q100 30 125 50" />
+  <!-- Temples -->
+  <line x1="25" y1="50" x2="5" y2="40" />
+  <line x1="175" y1="50" x2="195" y2="40" />
+</svg>
