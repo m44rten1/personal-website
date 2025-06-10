@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maartenvansteenkiste.com/sitemap.xml
