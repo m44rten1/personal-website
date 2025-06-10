@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/maarten.svg" />
+    <link rel="icon" type="image/svg+xml" href="/fingerprint.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,23 +10,23 @@
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
-    <title>Maarten</title>
-    <script
-      type="module"
-      src="https://unpkg.com/wired-elements?module"
-    ></script>
-    <script
-      type="module"
-      src="https://unpkg.com/wired-elements/lib/wired-combo.js?module"
-    ></script>
+    <title>Maarten Van Steenkiste</title>
 
     <style>
+      :root {
+        --text-color: #333;
+        --link-color: #0066cc;
+        --background-color: #ffffff;
+      }
+
       body {
         font-family: "Indie Flower", system-ui, Avenir, Helvetica, Arial,
           sans-serif;
         line-height: 1.5;
         margin: 0;
         font-size: 22px;
+        color: var(--text-color);
+        background-color: var(--background-color);
       }
 
       .center-screen {
@@ -39,44 +39,131 @@
         gap: 30px;
       }
 
-      a:hover {
-        transform: scale(1.1);
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        transition: transform 0.2s ease;
       }
+
+      a:hover,
+      a:focus {
+        transform: scale(1.05);
+        outline: 2px solid var(--link-color);
+        outline-offset: 2px;
+      }
+
       p {
         margin: 0;
+      }
+
+      .profile-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .profile-image {
+        width: 400px;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .profile-title {
+        margin: 10px 0;
+      }
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .links-container {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: start;
+        list-style: none;
+        padding: 0;
+        margin-top: 60px;
+      }
+
+      .contact-link {
+        display: block;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a {
+          transition: none;
+        }
+        a:hover,
+        a:focus {
+          transform: none;
+        }
       }
     </style>
   </head>
   <body>
-    <div id="app" class="center-screen">
-      <div style="display: flex; align-items: center; flex-direction: column">
-        <img src="/maarten.svg" alt="maarten" width="400px" />
-        <h1 style="margin: 10px 0">Maarten Van Steenkiste</h1>
+    <main class="center-screen">
+      <div class="profile-container">
+        <img
+          src="/maarten.svg"
+          alt="Portrait of Maarten Van Steenkiste"
+          class="profile-image"
+        />
+        <h1 class="profile-title">Maarten Van Steenkiste</h1>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px">
-        <p>Husband • Father • Maker • Minimalist</p>
+      <div class="content-container">
+        <p>Husband • Father • Maker • Essentialist</p>
         <p>
           Software Engineer at
-          <wired-link href="https://craftzing.com">Craftzing</wired-link>
-        </p>
-        <p>
-          <wired-link href="mailto:m.vansteenkiste@me.com"
-            >&#x2709; mail me</wired-link
+          <wired-link
+            href="https://craftzing.com"
+            aria-label="Visit Craftzing website"
+            >Craftzing</wired-link
           >
         </p>
       </div>
-    </div>
-    <a
-      href="https://github.com/m44rten1"
-      style="
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-      "
-    >
-      <img src="/github_pencil.svg" alt="github" width="40px" />
-    </a>
-    <script type="module" src="/src/main.ts"></script>
+      <ul class="links-container">
+        <li>
+          <a
+            href="https://github.com/m44rten1"
+            class="contact-link"
+            aria-label="Visit Maarten's GitHub profile"
+          >
+            <img
+              src="/github_pencil.svg"
+              alt="GitHub logo"
+              class="contact-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:m.vansteenkiste@me.com"
+            class="contact-link"
+            aria-label="Send email to Maarten"
+          >
+            <img src="/mail.svg" alt="Mail logo" class="contact-icon" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/maarten-van-steenkiste"
+            class="contact-link"
+            aria-label="Visit Maarten's LinkedIn profile"
+          >
+            <img src="/linkedin.svg" alt="LinkedIn logo" class="contact-icon" />
+          </a>
+        </li>
+      </ul>
+    </main>
   </body>
+
+  <script type="module" src="https://unpkg.com/wired-elements?module"></script>
 </html>
