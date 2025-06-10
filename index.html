@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
       rel="stylesheet"
     />
+
     <title>Maarten Van Steenkiste</title>
 
     <style>
@@ -24,11 +25,11 @@
       }
 
       body {
-        font-family: "Indie Flower", system-ui, Avenir, Helvetica, Arial,
+        font-family: "Comfortaa", system-ui, Avenir, Helvetica, Arial,
           sans-serif;
         line-height: 1.5;
-        margin: 0;
-        font-size: 22px;
+        margin: 0 5px 0 5px;
+        font-size: 20px;
         color: var(--text-color);
         background-color: var(--background-color);
       }
@@ -40,7 +41,7 @@
         text-align: center;
         min-height: 100vh;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
       }
 
       a {
@@ -78,7 +79,31 @@
       .content-container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 35px;
+      }
+
+      .roles-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 8px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+
+      @media (min-width: 480px) {
+        .roles-list {
+          flex-direction: row;
+          gap: 15px;
+        }
+
+        .roles-list li:not(:last-child)::after {
+          content: "|";
+          margin-left: 15px;
+          opacity: 0.5;
+        }
       }
 
       .links-container {
@@ -131,7 +156,12 @@
         <h1 class="profile-title">Maarten Van Steenkiste</h1>
       </div>
       <div class="content-container">
-        <p>Husband • Father • Maker • Essentialist</p>
+        <ul class="roles-list">
+          <li>Husband</li>
+          <li>Father</li>
+          <li>Maker</li>
+          <li>Essentialist</li>
+        </ul>
         <p>
           Software Engineer at
           <wired-link
