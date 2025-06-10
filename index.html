@@ -47,9 +47,7 @@
 
       a:hover,
       a:focus {
-        transform: scale(1.05);
-        outline: 2px solid var(--link-color);
-        outline-offset: 2px;
+        transform: scale(1.2);
       }
 
       p {
@@ -99,6 +97,11 @@
         height: 40px;
       }
 
+      wired-link:focus {
+        outline: 2px solid var(--link-color);
+        outline-offset: 2px;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         a {
           transition: none;
@@ -106,6 +109,8 @@
         a:hover,
         a:focus {
           transform: none;
+          outline: 2px solid var(--link-color);
+          outline-offset: 2px;
         }
       }
     </style>
