@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Generated blog files
+blog/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

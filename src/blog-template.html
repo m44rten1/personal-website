@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/circle-user-round.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>{{TITLE}} - Maarten Van Steenkiste</title>
+
+    <style>
+      :root {
+        --text-color: #333;
+        --link-color: #0066cc;
+        --background-color: #ffffff;
+        --muted-color: #666;
+      }
+
+      body {
+        font-family:
+          "Comfortaa", system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        font-size: 18px;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 650px;
+        margin: 0 auto;
+      }
+
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+
+      a:focus {
+        outline: 2px solid var(--link-color);
+        outline-offset: 2px;
+      }
+
+      .header {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .header a {
+        font-size: 14px;
+        opacity: 0.7;
+      }
+
+      .header a:hover,
+      .header a:focus {
+        opacity: 1;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+      }
+
+      .date {
+        color: var(--muted-color);
+        font-size: 14px;
+      }
+
+      .content {
+        margin-top: 30px;
+      }
+
+      .content p {
+        margin: 1.2em 0;
+      }
+
+      .content h2 {
+        font-size: 22px;
+        margin-top: 2em;
+        font-weight: 500;
+      }
+
+      .content h3 {
+        font-size: 18px;
+        margin-top: 1.5em;
+        font-weight: 500;
+      }
+
+      .content code {
+        background: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 0.9em;
+      }
+
+      .content pre {
+        background: #f5f5f5;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+
+      .content pre code {
+        background: none;
+        padding: 0;
+      }
+
+      .content blockquote {
+        border-left: 3px solid #ddd;
+        margin: 1.5em 0;
+        padding-left: 20px;
+        color: var(--muted-color);
+      }
+
+      .content ul,
+      .content ol {
+        padding-left: 25px;
+      }
+
+      .content li {
+        margin: 0.5em 0;
+      }
+
+      .posts-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .posts-list li {
+        margin: 20px 0;
+      }
+
+      .posts-list a {
+        font-size: 18px;
+      }
+
+      .posts-list .date {
+        display: block;
+        margin-top: 5px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        a {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="header">
+      <a href="{{BACK_LINK}}">&larr; {{BACK_TEXT}}</a>
+    </nav>
+    {{CONTENT}}
+  </body>
+</html>

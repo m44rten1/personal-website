@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,8 +25,8 @@
       }
 
       body {
-        font-family: "Comfortaa", system-ui, Avenir, Helvetica, Arial,
-          sans-serif;
+        font-family:
+          "Comfortaa", system-ui, Avenir, Helvetica, Arial, sans-serif;
         line-height: 1.5;
         margin: 0 5px 0 5px;
         font-size: 20px;
@@ -53,6 +53,11 @@
       a:hover,
       a:focus {
         transform: scale(1.2);
+      }
+
+      a:focus {
+        outline: 2px solid var(--link-color);
+        outline-offset: 2px;
       }
 
       p {
@@ -127,6 +132,10 @@
         height: 40px;
       }
 
+      wired-link {
+        --wired-link-decoration-color: var(--link-color);
+      }
+
       wired-link:focus {
         outline: 2px solid var(--link-color);
         outline-offset: 2px;
@@ -142,6 +151,16 @@
           outline: 2px solid var(--link-color);
           outline-offset: 2px;
         }
+      }
+
+      .writing-link {
+        font-size: 14px;
+        opacity: 0.6;
+      }
+
+      .writing-link:hover,
+      .writing-link:focus-within {
+        opacity: 1;
       }
     </style>
   </head>
@@ -204,6 +223,9 @@
           </a>
         </li>
       </ul>
+      <p class="writing-link">
+        <a href="/blog/">Notes</a>
+      </p>
     </main>
   </body>
 
