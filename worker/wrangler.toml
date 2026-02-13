@@ -1,0 +1,15 @@
+name = "personal-website"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[[rules]]
+type = "Text"
+globs = ["**/*.txt"]
+fallthrough = true
+
+# Route the worker on your domain.
+# Make sure your domain is added to your Cloudflare account
+# and the DNS record is proxied (orange cloud).
+[[routes]]
+pattern = "m44rten.com/*"
+zone_name = "m44rten.com"
